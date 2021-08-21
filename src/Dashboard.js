@@ -65,9 +65,7 @@ function Dashboard() {
           assigned: user.id,
         },
       })
-      .then((res) => {
-        setCompleted(res.data);
-      })
+      .then((res) => {})
       .catch((err) => {
         console.log("Fetch complete err >>>", err);
       });
@@ -228,7 +226,7 @@ function Dashboard() {
                 </form>
               </div>
 
-              <div className="my-2 h-72 overflow-y-auto">
+              <div className="my-2 h-72 2xl:h-96  overflow-y-auto">
                 <div className="px-4 py-2 space-y-2">
                   {toDo.length > 0 &&
                     toDo.map((task) => {
@@ -252,7 +250,7 @@ function Dashboard() {
                 <h1>Completed</h1>
               </div>
 
-              <div className="my-2 h-80 overflow-y-auto">
+              <div className="my-2 h-80 2xl:h-96 overflow-y-auto">
                 <div className="px-4  space-y-2">
                   {completed.length > 0 &&
                     completed.map((task) => {
