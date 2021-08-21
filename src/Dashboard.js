@@ -65,7 +65,9 @@ function Dashboard() {
           assigned: user.id,
         },
       })
-      .then((res) => {})
+      .then((res) => {
+        setCompleted(res.data);
+      })
       .catch((err) => {
         console.log("Fetch complete err >>>", err);
       });
